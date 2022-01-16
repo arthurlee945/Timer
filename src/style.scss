@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap');
+
+body{
+  background:linear-gradient( 45deg,#080808,#080808,#180501,#1f0701);
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#ffb900;
+  font-family: 'Open Sans', "Roboto", sans-serif;
+  text-align:center;
+  user-select: none;
+}
+
+.mainTimer{
+  text-align:center;
+  display:flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+  align-items: center;
+
+  #time-left{
+    font-weight:100;
+    font-size: 8rem;
+    letter-spacing:0.5rem;
+    vertical-align: middle;
+    margin:10px;
+    margin-right: 20px;
+    padding-bottom:10px;
+  }
+  .setters{
+    text-align:center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    #setterBtns{
+      margin-right: 5px;
+      #break-increment,
+      #break-decrement,
+      #session-decrement,
+      #session-increment{
+          &:hover{
+            color:#ffe08c;
+            animation: bigger 0.2s;
+            animation-fill-mode: forwards;
+            @keyframes bigger{
+              from{font-size: 1rem;}
+              50%{font-szie: 1.1rem;}
+              to{font-size: 1.2rem;}
+            }
+          }     
+      }
+      .btnDetail{
+        margin:0px;
+        font-weight:bold;
+      }
+    }
+    .btnDes{
+        padding-left: 5px;
+    }
+  }
+}
+
+
+#controls{
+    height:1.5rem;
+    text-align:center;
+    #start_stop,
+    #reset{
+      padding:10px;
+      &:hover{
+        color:#ffe08c;
+        animation: bigger 0.2s;
+        animation-fill-mode: forwards;
+        @keyframes bigger{
+           from{font-size: 1rem;}
+           50%{font-szie: 1.1rem;}
+           to{font-size: 1.2rem;}
+        }
+      }
+    }
+}
+
+.alarmAni {
+  animation: type 2s 
+}
+@keyframes type{
+  0%{
+    color:#ff3100;
+  }
+  10%{
+    color:#ffb900;
+    transform: rotate(10deg)
+  }
+  20%{
+    color:#ff3100;
+    transform: rotate(-10deg)
+  }
+  30%{
+    color:#ffb900;
+    transform: rotate(10deg)
+  }
+  40%{
+    color:#ff3100;
+    transform: rotate(-10deg)
+  }
+  50%{
+    color:#ffb900;
+    transform: rotate(10deg)
+  }
+  60%{
+    color:#ff3100;
+    transform: rotate(-10deg)
+  }
+  70%{
+    color:#ffb900;
+    transfrom: rotate(10deg)
+  }
+  80%{
+    color:#ff3100;
+    transform: rotate(-10deg)
+  }
+  90%{
+    color:#ffb900;
+    transform: rotate(10deg)
+  }
+  95%{
+    color:#ff3100;
+    transform: rotate(-10deg)
+  }
+  100%{
+    color:#ff3100;
+    transform: rotate(0deg)
+  }
+}
+
+#title{
+  text-align:center;
+  white-space: nowrap;
+  overflow: hidden; 
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 480px) {
+  .mainTimer{
+  display:flex;
+  flex-direction: column;
+  }
+  .setters{
+    display:inline-flex;
+    margin: 10px;
+  }
+}
